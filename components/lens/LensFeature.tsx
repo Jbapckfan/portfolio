@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { PHOTO, featureShot } from "./data";
+import { LOCAL, featureShot } from "./data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +38,7 @@ export default function LensFeature() {
       </div>
       <div ref={wrap} className="relative h-[64vh] w-full overflow-hidden">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={PHOTO(featureShot.id, 2000, 1100)} alt={featureShot.title} className="h-full w-full object-cover" />
+        <img src={LOCAL(featureShot.file)} alt={featureShot.title} className="h-full w-full object-cover" />
       </div>
     </section>
   );

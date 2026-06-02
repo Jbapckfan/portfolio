@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { PHOTO, heroShot, lensProfile } from "./data";
+import { LOCAL, heroShot, lensProfile } from "./data";
 
 /** Full-bleed hero with a slow Ken Burns drift + title overlay. */
 export default function LensHero() {
@@ -26,7 +26,7 @@ export default function LensHero() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         ref={img}
-        src={PHOTO(heroShot.id, 2000, 1200)}
+        src={LOCAL(heroShot.file)}
         alt={heroShot.title}
         className="absolute inset-0 h-full w-full object-cover"
       />

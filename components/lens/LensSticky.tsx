@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { PHOTO, stickyShot } from "./data";
+import { LOCAL, stickyShot } from "./data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +31,7 @@ export default function LensSticky() {
       <div className="flex h-full items-center justify-center">
         <div ref={box} className="relative h-screen w-screen overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={PHOTO(stickyShot.id, 2000, 1200)} alt={stickyShot.title} className="h-full w-full object-cover" />
+          <img src={LOCAL(stickyShot.file)} alt={stickyShot.title} className="h-full w-full object-cover" />
           <div ref={cap} className="absolute inset-0 flex items-end p-6 md:p-14">
             <div className="mix-blend-difference">
               <h2 className="font-display italic leading-none tracking-tight text-bone text-[clamp(2.5rem,9vw,7rem)]">

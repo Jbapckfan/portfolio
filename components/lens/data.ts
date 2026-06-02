@@ -1,12 +1,13 @@
 /**
- * ── EDIT ME ──────────────────────────────────────────────────────────────
- * Photography / drone portfolio content. Swap the Picsum placeholders for
- * your real shots from ~/Media (export a few favorites into /public/lens/).
+ * ── Photography / drone portfolio content ──
+ * Images live in /public/lens/. Sharp shots (≥1024px) go in the full-bleed
+ * slots; the 540px lake previews sit in the smaller gallery cards.
  */
 
-// Color image helper (NOT grayscale — photography is in color).
-export const PHOTO = (id: number, w = 1600, h = 1000) =>
-  `https://picsum.photos/id/${id}/${w}/${h}`;
+// public/ assets aren't auto-prefixed with basePath in a plain <img>, so we
+// prefix manually. NEXT_PUBLIC_BASE_PATH is "" on Vercel, "/portfolio" on GH Pages.
+const PREFIX = process.env.NEXT_PUBLIC_BASE_PATH || "";
+export const LOCAL = (file: string) => `${PREFIX}/lens/${file}`;
 
 export const lensProfile = {
   name: "James Alford",
@@ -18,35 +19,27 @@ export const lensProfile = {
   location: "United States",
 };
 
-export type Shot = { id: number; title: string; place: string; kind: "Drone" | "Field" };
+export type Shot = { file: string; title: string; kind: "Drone" | "Field" };
 
-// Hero + featured large frames.
-export const heroShot: Shot = { id: 1018, title: "Ridgeline", place: "—", kind: "Drone" };
-export const featureShot: Shot = { id: 1015, title: "River Bend", place: "—", kind: "Drone" };
-export const stickyShot: Shot = { id: 1036, title: "First Light", place: "—", kind: "Field" };
+// Full-bleed hero + featured frames (the sharp ones).
+export const heroShot: Shot = { file: "kaanapali-coast.jpg", title: "Kāʻanapali Coast", kind: "Drone" };
+export const featureShot: Shot = { file: "iao-needle.jpg", title: "ʻĪao Needle", kind: "Drone" };
+export const stickyShot: Shot = { file: "mother-and-calf.jpg", title: "Mother & Calf", kind: "Drone" };
 
 // Parallax bands.
 export const bands: Shot[] = [
-  { id: 1039, title: "Cascade", place: "—", kind: "Field" },
-  { id: 1043, title: "Treeline", place: "—", kind: "Drone" },
-  { id: 1057, title: "Coast Road", place: "—", kind: "Drone" },
+  { file: "spillway-dusk.jpg", title: "Spillway, Dusk", kind: "Drone" },
+  { file: "hilltop-church.jpg", title: "Hilltop Chapel", kind: "Drone" },
+  { file: "humpbacks.jpg", title: "Humpbacks", kind: "Drone" },
 ];
 
-// Draggable gallery + grid.
+// Draggable gallery (smaller cards — fine for the 540px lake shots).
 export const gallery: Shot[] = [
-  { id: 1016, title: "Switchback", place: "—", kind: "Drone" },
-  { id: 1024, title: "Den", place: "—", kind: "Field" },
-  { id: 1059, title: "Still Water", place: "—", kind: "Drone" },
-  { id: 1061, title: "Harbor", place: "—", kind: "Drone" },
-  { id: 1069, title: "Haze", place: "—", kind: "Field" },
-  { id: 1074, title: "Crest", place: "—", kind: "Drone" },
+  { file: "northwoods-lakes.jpg", title: "Northwoods Lakes", kind: "Drone" },
+  { file: "still-bay.jpg", title: "Still Bay", kind: "Drone" },
+  { file: "sandbar-point.jpg", title: "Sandbar Point", kind: "Drone" },
+  { file: "showboat.jpg", title: "Showboat", kind: "Drone" },
 ];
 
-export const grid: Shot[] = [
-  { id: 1084, title: "Dune", place: "—", kind: "Field" },
-  { id: 200, title: "Window Light", place: "—", kind: "Field" },
-  { id: 164, title: "Desk", place: "—", kind: "Field" },
-  { id: 29, title: "Canyon", place: "—", kind: "Drone" },
-  { id: 1011, title: "Shoreline", place: "—", kind: "Drone" },
-  { id: 1006, title: "Portrait of Place", place: "—", kind: "Field" },
-];
+// Contact backdrop.
+export const contactShot = "kaanapali-coast.jpg";

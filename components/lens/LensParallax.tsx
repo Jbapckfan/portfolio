@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { PHOTO, bands } from "./data";
+import { LOCAL, bands } from "./data";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,10 +32,10 @@ export default function LensParallax() {
   return (
     <div ref={root} className="bg-ink">
       {bands.map((s) => (
-        <figure key={s.id} className="relative h-[80vh] w-full overflow-hidden">
+        <figure key={s.file} className="relative h-[80vh] w-full overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={PHOTO(s.id, 2000, 1300)}
+            src={LOCAL(s.file)}
             alt={s.title}
             className="band-img absolute inset-x-0 top-[-14%] h-[128%] w-full object-cover"
           />

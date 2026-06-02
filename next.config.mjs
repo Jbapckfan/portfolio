@@ -13,6 +13,8 @@ const nextConfig = {
   }),
   trailingSlash: true,
   images: { unoptimized: true },
+  // Exposed to the client so /public images can be basePath-prefixed by hand.
+  env: { NEXT_PUBLIC_BASE_PATH: isGhPages ? "/portfolio" : "" },
 };
 
 export default nextConfig;

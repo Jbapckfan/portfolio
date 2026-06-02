@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
-import { PHOTO, gallery } from "./data";
+import { LOCAL, gallery } from "./data";
 
 gsap.registerPlugin(Draggable, InertiaPlugin);
 
@@ -42,9 +42,9 @@ export default function LensGallery() {
       </div>
       <div ref={track} className="flex w-max cursor-grab items-center gap-5 px-6 active:cursor-grabbing md:px-14">
         {gallery.map((s) => (
-          <figure key={s.id} className="relative h-[58vh] w-[80vw] shrink-0 select-none overflow-hidden md:w-[34vw]">
+          <figure key={s.file} className="relative h-[58vh] w-[80vw] shrink-0 select-none overflow-hidden md:w-[34vw]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={PHOTO(s.id, 1100, 1300)} alt={s.title} draggable={false} className="h-full w-full object-cover" />
+            <img src={LOCAL(s.file)} alt={s.title} draggable={false} className="h-full w-full object-cover" />
             <figcaption className="absolute bottom-4 left-4 flex items-baseline gap-3 mix-blend-difference">
               <span className="font-display text-2xl text-bone">{s.title}</span>
               <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-bone/80">{s.kind}</span>
