@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
+
+// GitHub Pages needs static export + a /portfolio basePath.
+// Vercel (and local dev) serve cleanly at the root — no basePath.
+// Toggle the Pages build with: GH_PAGES=true npm run build
+const isGhPages = process.env.GH_PAGES === "true";
+
 const nextConfig = {
-  // Static export for GitHub Pages (no server needed — every route is static).
-  output: "export",
-  // Served from https://<user>.github.io/portfolio/
-  basePath: "/portfolio",
-  assetPrefix: "/portfolio/",
+  ...(isGhPages && {
+    output: "export",
+    basePath: "/portfolio",
+    assetPrefix: "/portfolio/",
+  }),
   trailingSlash: true,
   images: { unoptimized: true },
 };
