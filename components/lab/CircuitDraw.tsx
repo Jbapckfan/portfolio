@@ -55,7 +55,7 @@ export default function CircuitDraw() {
       ref={sec}
       className="relative flex min-h-screen flex-col justify-center gap-10 bg-ink px-6 py-24 md:px-16"
     >
-      <EffectLabel index="L05" name="Circuit Draw" tech="GSAP DrawSVG · scrub" />
+      <EffectLabel index="L03" name="Circuit Draw" tech="GSAP DrawSVG · scrub" />
       <p className="font-display font-bold leading-[0.9] tracking-tightest text-bone text-[clamp(2rem,7vw,5.5rem)]">
         signal <span className="text-sulfur">routing</span>
       </p>

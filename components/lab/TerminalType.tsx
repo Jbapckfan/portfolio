@@ -69,7 +69,7 @@ export default function TerminalType() {
       ref={sec}
       className="relative flex min-h-screen items-center justify-center bg-ink px-6"
     >
-      <EffectLabel index="L07" name="AI Terminal" tech="typewriter · scroll-triggered" />
+      <EffectLabel index="L05" name="AI Terminal" tech="typewriter · scroll-triggered" />
       <div className="w-full max-w-3xl border border-sulfur/25 bg-ink/90 backdrop-blur">
         <div className="flex items-center gap-2 border-b border-ash/30 px-4 py-3">
           <span className="h-2.5 w-2.5 rounded-full bg-signal/70" />

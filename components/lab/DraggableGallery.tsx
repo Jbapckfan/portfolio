@@ -48,7 +48,7 @@ export default function DraggableGallery() {
 
   return (
     <section className="relative flex min-h-screen flex-col justify-center gap-10 overflow-hidden bg-ink">
-      <EffectLabel index="L06" name="Draggable Gallery" tech="GSAP Draggable · inertia flick" />
+      <EffectLabel index="L04" name="Draggable Gallery" tech="GSAP Draggable · inertia flick" />
       <div className="px-6 md:px-16">
         <p className="font-mono text-xs uppercase tracking-[0.4em] text-sulfur">
           drag · throw →

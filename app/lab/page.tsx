@@ -4,8 +4,6 @@ import type { Metadata } from "next";
 
 import NeuralField from "@/components/lab/NeuralField";
 import DecryptText from "@/components/lab/DecryptText";
-import StackingCards from "@/components/lab/StackingCards";
-import GenerativeReveal from "@/components/lab/GenerativeReveal";
 import CircuitDraw from "@/components/lab/CircuitDraw";
 import DraggableGallery from "@/components/lab/DraggableGallery";
 import TerminalType from "@/components/lab/TerminalType";
@@ -43,8 +41,6 @@ export default function Lab() {
 
       <NeuralField />
       <DecryptText />
-      <StackingCards />
-      <GenerativeReveal />
       <CircuitDraw />
       <DraggableGallery />
       <TerminalType />

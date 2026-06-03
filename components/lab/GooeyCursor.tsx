@@ -60,7 +60,7 @@ export default function GooeyCursor() {
       ref={sec}
       className="relative flex min-h-screen cursor-none items-center justify-center overflow-hidden bg-ink"
     >
-      <EffectLabel index="L08" name="Gooey Cursor" tech="metaballs · SVG goo filter" />
+      <EffectLabel index="L06" name="Gooey Cursor" tech="metaballs · SVG goo filter" />
       <p className="pointer-events-none relative z-10 text-center font-display font-bold leading-[0.9] tracking-tightest text-bone text-[clamp(2.5rem,9vw,8rem)] mix-blend-difference">
         move
         <br />
