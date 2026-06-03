@@ -41,5 +41,17 @@ export const gallery: Shot[] = [
   { file: "showboat.jpg", title: "Showboat", kind: "Drone" },
 ];
 
+// ── Field / on-foot photography (non-drone) — masonry grid ──
+export const field: Shot[] = [
+  { file: "toucan.jpg", title: "Toco Toucan", kind: "Field" },
+  { file: "red-panda.jpg", title: "Red Panda", kind: "Field" },
+  { file: "barred-owl.jpg", title: "Barred Owl", kind: "Field" },
+  { file: "sunflower.jpg", title: "Sunflower", kind: "Field" },
+  { file: "mopop.jpg", title: "MoPOP", kind: "Field" },
+  { file: "the-strait.jpg", title: "The Strait", kind: "Field" },
+  { file: "deception-pass.jpg", title: "Deception Pass", kind: "Field" },
+  { file: "ferry-olympics.jpg", title: "Crossing", kind: "Field" },
+];
+
 // Contact backdrop.
 export const contactShot = "kaanapali-coast.jpg";

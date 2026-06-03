@@ -37,7 +37,7 @@ export default function LensGallery() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center gap-8 overflow-hidden bg-ink py-20">
       <div className="flex items-end justify-between px-6 md:px-14">
-        <h2 className="font-display leading-none tracking-tight text-bone text-[clamp(2rem,6vw,4.5rem)]">Selected frames</h2>
+        <h2 className="font-display leading-none tracking-tight text-bone text-[clamp(2rem,6vw,4.5rem)]">Aerial — selected frames</h2>
         <span className="hidden font-sans text-xs uppercase tracking-[0.3em] text-sulfur md:block">drag · throw →</span>
       </div>
       <div ref={track} className="flex w-max cursor-grab items-center gap-5 px-6 active:cursor-grabbing md:px-14">

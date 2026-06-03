@@ -8,6 +8,7 @@ import LensFeature from "@/components/lens/LensFeature";
 import LensParallax from "@/components/lens/LensParallax";
 import LensSticky from "@/components/lens/LensSticky";
 import LensGallery from "@/components/lens/LensGallery";
+import LensFieldGrid from "@/components/lens/LensFieldGrid";
 import LensContact from "@/components/lens/LensContact";
 
 // Gallery type system — characterful serif + clean grotesk, scoped to /lens.
@@ -41,6 +42,7 @@ export default function Lens() {
       <LensParallax />
       <LensSticky />
       <LensGallery />
+      <LensFieldGrid />
       <LensContact />
 
       <footer className="border-t border-ash/30 px-8 py-12 font-sans text-xs uppercase tracking-[0.3em] text-ash">
